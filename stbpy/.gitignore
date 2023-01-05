@@ -1,0 +1,8 @@
+build/
+*.egg-info/
+*.html
+*.c
+*.pyd
+*.so
+cython_debug/
+.vscode/
