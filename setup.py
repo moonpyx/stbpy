@@ -3,16 +3,10 @@ import sys
 from Cython.Build import cythonize
 from setuptools.extension import Extension
 
-    
-platform = sys.platform
-if platform == 'win32':
-	cstdarg = '-std=gnu99'
-else:
-	cstdarg = '-std=c99'
 
 ext = [Extension('stb.image',
                  sources=['stb/image.pyx'],
-                 extra_compile_args=[cstdarg, '-ffast-math', '-fPIC'])]
+                 extra_compile_args=['-ffast-math'])]
 
 with open("README.md", "r") as f:
     long_description = f.read()
